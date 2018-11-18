@@ -6,7 +6,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Log Me In',
       home: Scaffold(
-        appBar: AppBar(title: Text('lasldaldlasl'),),
+        appBar: AppBar(title: Text('New APp'),),
         body: LoginScreen(),
       )
 
