@@ -9,6 +9,7 @@ class LoginScreen extends StatelessWidget{
         children: <Widget>[
           emailField(),
           passwordField(),
+          submitButton(),
         ],
       )
     );
@@ -21,7 +22,8 @@ Widget emailField() {
          decoration: InputDecoration(
            hintText: "You@Example.com",
            labelText: "Email Address",
-         ), 
+         ),
+          
 
       );
 }
@@ -36,5 +38,8 @@ Widget passwordField() {
 
   );
 }
-  
+Widget submitButton() {
+  return 
+}
+
 }
