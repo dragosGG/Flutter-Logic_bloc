@@ -1,8 +1,8 @@
 import "dart:async";
 
 class Bloc {
-  final emailController = StreamController();
-  final passwordComtroller = StreamController();
-  
+  final emailController = StreamController<String>();
+  final passwordComtroller = StreamController<String>();
+
 
 }

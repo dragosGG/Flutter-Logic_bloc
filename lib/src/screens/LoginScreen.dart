@@ -35,6 +35,7 @@ Widget passwordField() {
     decoration: InputDecoration(
       hintText: "Password",
       labelText: "Password",
+      errorText: "Wrong Email"
     ),
 
   );
