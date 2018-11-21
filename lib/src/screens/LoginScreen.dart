@@ -23,13 +23,12 @@ Widget emailField() {
     stream: bloc.email,
     builder: (context, snapshot) {
        return TextField(
-         onChanged: (newValue) {
-           bloc.changeEmail(newValue);
-         },
+         onChanged:bloc.changeEmail,
          keyboardType: TextInputType.emailAddress,
          decoration: InputDecoration(
            hintText: "You@Example.com",
            labelText: "Email Address",
+           errorText: snapshot.error,
          ),
           
       );
