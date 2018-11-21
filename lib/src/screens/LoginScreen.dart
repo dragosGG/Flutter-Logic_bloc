@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../blocs/bloc.dart';
 
 
 class LoginScreen extends StatelessWidget{
@@ -18,15 +19,22 @@ class LoginScreen extends StatelessWidget{
     
   }
 Widget emailField() {
-      return TextField(
+  return StreamBuilder(
+    stream: bloc.email,
+    builder: (context, snapshot) {
+       return TextField(
+         onChanged: (newValue) {
+           bloc.changeEmail(newValue);
+         },
          keyboardType: TextInputType.emailAddress,
          decoration: InputDecoration(
            hintText: "You@Example.com",
            labelText: "Email Address",
          ),
           
-
       );
+    },
+  );     
 }
 
 Widget passwordField() {
