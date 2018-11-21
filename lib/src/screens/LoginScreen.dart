@@ -47,11 +47,11 @@ Widget passwordField() {
       hintText: "Password",
       labelText: "Password",
       errorText: snapshot.error,
-    ),
+                          ),
   
-  );
-}
-  );
+            );
+          },
+      );
 }
 Widget submitButton() {
   return RaisedButton(
@@ -59,7 +59,6 @@ Widget submitButton() {
     color: Colors.blue,
     onPressed: () {},
 
-    
     
     );
 }
