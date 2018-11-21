@@ -21,3 +21,5 @@ dispose() {
   _password.close();
 }
 }
+
+final bloc = Bloc();
