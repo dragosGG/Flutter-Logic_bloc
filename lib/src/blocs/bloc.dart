@@ -9,7 +9,7 @@ class Bloc extends Object with Validators {
 
 // Getter that allow us to add data to stream 
 Stream<String> get email => _email.stream.transform(validateEmail);
-Stream<String> get passwrod => _password.stream.transform(validatePassword);
+Stream<String> get password => _password.stream.transform(validatePassword);
 
 // Second Bloc of Getters - which will allow us to change data
 
