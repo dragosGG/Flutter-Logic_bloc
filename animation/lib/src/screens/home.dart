@@ -20,7 +20,10 @@ initState() {
     CurvedAnimation(parent:catController,
     curve: Curves.easeIn)
   );
+
+  catController.forward();
 }
+
 
   Widget build(context) {
     return Scaffold(
@@ -36,11 +39,18 @@ initState() {
   Widget buildAnimation(){
       return AnimatedBuilder(
       animation: catAnimation,
-      builder: (context, child) {},
+      builder: (context, child) {
+        return Container(
+          child: child,
+          margin: EdgeInsets.only(top:catAnimation.value),
+        );
+        
+      },
       child: Cat(),
+        )
+  
 
-    
-
-      );
+      ;
       }
+      
 }
