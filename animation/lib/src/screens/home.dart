@@ -40,11 +40,13 @@ onTap() {
         title: Text('Animation!'),
       ),
       body: GestureDetector(
+      child:Center(
       child:Stack(
         children: <Widget>[
           buildCatAnimation(),
           buildBox(),
         ],
+      ),
       ),
       onTap: onTap,
       )
