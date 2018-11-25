@@ -21,17 +21,22 @@ initState() {
     curve: Curves.easeIn)
   );
 
-  catController.forward();
+  
 }
 
+onTap() {
+  catController.forward();
 
+}
   Widget build(context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('Animation!'),
       ),
-      body: buildAnimation(),
-      
+      body: GestureDetector(
+      child:buildAnimation(),
+      onTap: onTap,
+      )
     );
 
     
