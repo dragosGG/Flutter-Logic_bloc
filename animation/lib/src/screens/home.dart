@@ -25,6 +25,12 @@ initState() {
 }
 
 onTap() {
+
+  if(catController.status == AnimationStatus.completed) {
+    catController.reverse();
+  } else if (catController.status == AnimationStatus.dismissed) {
+    catController.forward();
+  }
   catController.forward();
 
 }
