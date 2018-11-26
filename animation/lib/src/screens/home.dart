@@ -16,7 +16,7 @@ initState() {
     duration: Duration(seconds: 2),
     vsync: this,
   );
-  catAnimation = Tween(begin: 0.0, end: 100.0).animate(
+  catAnimation = Tween(begin: -50.0, end: 100.0).animate(
     CurvedAnimation(parent:catController,
     curve: Curves.easeIn)
   );
@@ -42,6 +42,7 @@ onTap() {
       body: GestureDetector(
       child:Center(
       child:Stack(
+        overflow: Overflow.visible,
         children: <Widget>[
           buildBox(),
           buildCatAnimation(),
