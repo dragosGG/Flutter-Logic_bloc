@@ -60,7 +60,9 @@ onTap() {
       builder: (context, child) {
         return Positioned(
           child: child,
-          bottom: catAnimation.value,        );
+          top: catAnimation.value,
+          right: 0.0,
+          left: 0.0,        );
         
       },
       child: Cat(),
