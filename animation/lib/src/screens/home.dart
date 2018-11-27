@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/cat.dart';
-
+import 'dart:math';
 class Home extends StatefulWidget {
   HomeState createState() => HomeState();
 }
@@ -46,6 +46,7 @@ onTap() {
         children: <Widget>[
           buildBox(),
           buildCatAnimation(),
+          buildLeftFlap(),
         ],
       ),
       ),
@@ -83,10 +84,14 @@ Widget buildBox() {
   );
 }
 
-Widget BuildLeftFlap() {
-  return Container(
+Widget buildLeftFlap() {
+  return Transform.rotate(
+    child: Container(
     height: 10.0 ,
     width: 125.0,
     color: Colors.red,
+  ),
+    angle: pi/ 2.0,
   );
+   
 }
