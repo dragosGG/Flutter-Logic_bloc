@@ -85,13 +85,18 @@ Widget buildBox() {
 }
 
 Widget buildLeftFlap() {
-  return Transform.rotate(
+  return Positioned(
+    left: 3.0,
+    child: Transform.rotate(
     child: Container(
     height: 10.0 ,
     width: 125.0,
     color: Colors.red,
   ),
-    angle: pi/ 2.0,
+    angle: pi/ 0.6,
+    alignment: Alignment.topLeft,
+  ),
   );
+
    
 }
