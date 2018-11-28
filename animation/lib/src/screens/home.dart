@@ -110,11 +110,8 @@ Widget buildLeftFlap() {
         child: child,
         alignment: Alignment.topLeft,
         angle: boxAnimation,
-      );
-
-    }
-
-  ));
-
-   
+           );
+          }
+      )
+  );
 }
