@@ -15,16 +15,21 @@ initState() {
   super.initState();
 
   boxController = AnimationController(
-    duration: Duration(seconds: 2),
+    duration: Duration(milliseconds: 300),
     vsync: this
   );
 
-  boxAnimation = Tween(begin: 0.0, end: 3.14).animate(
+  boxAnimation = Tween(begin: pi*0.6, end: pi*0.65).animate(
     CurvedAnimation(
       parent: boxController,
       curve: Curves.linear),
   );
-
+  boxAnimation.addListener((status){
+    if(status == AnimationStatus.completed ) {
+      boxController.repeat();
+    }
+  });
+  boxController.forward();
   catController = AnimationController(
     duration: Duration(milliseconds: 200),
     vsync: this,
