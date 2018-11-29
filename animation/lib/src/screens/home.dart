@@ -24,9 +24,11 @@ initState() {
       parent: boxController,
       curve: Curves.linear),
   );
-  boxAnimation.addListener((status){
+  boxAnimation.addStatusListener((status){
     if(status == AnimationStatus.completed ) {
-      boxController.repeat();
+      boxController.reverse();
+    } else if (status  == AnimationStatus.dismissed) {
+      boxController.forward();
     }
   });
   boxController.forward();
@@ -65,6 +67,7 @@ onTap() {
           buildBox(),
           buildCatAnimation(),
           buildLeftFlap(),
+          buildRightFlap()
         ],
       ),
       ),
@@ -115,6 +118,25 @@ Widget buildLeftFlap() {
         child: child,
         alignment: Alignment.topLeft,
         angle: boxAnimation,
+           );
+          }
+      )
+  );
+}
+
+Widget buildRightFlap() {
+  return Positioned(
+    child: AnimatedBuilder(
+    animation: boxAnimation,
+    child: Container(
+    height: 10.0 ,
+    width: 125.0,
+    color: Colors.brown), 
+    builder: (context, child) {
+      return Transform.rotate(
+        child: child,
+        alignment: Alignment.topRight,
+        angle: -boxAnimation,
            );
           }
       )
